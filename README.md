@@ -14,8 +14,12 @@ Deep knowledge of MooTools is not necessary to complete this assignment, but kno
   npm run test
   npm run build
   cd ..
+  # Open `/index.html` in browser
+  # for Mac
+  open index.html
+  # for Ubuntu
+  xdg-open index.html
   ```
-- Open `/assessment-ui-developer/index.html` in browser
 
 ## Page communication pubsub explanation
 There are 4 topics:
