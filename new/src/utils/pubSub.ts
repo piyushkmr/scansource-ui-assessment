@@ -37,10 +37,7 @@ class PubSub {
   }
 
   publish(data: any, topic: string = ALL_TOPIC) {
-    if (!this.topics[topic]) {
-      return false;
-    }
-    let subscribers = this.topics[topic];
+    let subscribers = this.topics[topic] || [];
     if (topic !== ALL_TOPIC) {
       subscribers = subscribers.concat(this.topics[ALL_TOPIC] || []);
     }

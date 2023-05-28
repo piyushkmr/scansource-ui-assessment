@@ -1,10 +1,9 @@
 module.exports = {
   moduleNameMapper: {
-    '^@/(.*)': '<rootDir>/src/$1',
     '^.+\\.scss$': '<rootDir>/configs/scssModules.js'
   },
   transform: {
-    '\\.tsx?$': ['babel-jest', { configFile: './configs/jest.babel.config.js' }]
+    '\\.tsx?$': ['babel-jest'],
   },
   setupFilesAfterEnv: ['<rootDir>/configs/jestSetup.ts'],
   testEnvironment: 'jsdom',

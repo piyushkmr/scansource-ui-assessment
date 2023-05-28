@@ -1,0 +1,21 @@
+{
+  "name": "assessment-ui-developer",
+  "version": "1.0.0",
+  "description": "In this assessment, you will demonstrate your ability to integrate modern technologies, like React, with an old codebase that uses MooTools.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "cd new && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpmsoftware/assessment-ui-developer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpmsoftware/assessment-ui-developer/issues"
+  },
+  "homepage": "https://github.com/rpmsoftware/assessment-ui-developer#readme"
+}
