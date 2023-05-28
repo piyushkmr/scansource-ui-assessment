@@ -4,7 +4,36 @@ In this assessment, you will demonstrate your ability to integrate modern techno
 
 Deep knowledge of MooTools is not necessary to complete this assignment, but knowledge of similar libraries from the same era (like JQuery) will help.
 
+## Instructions
+- To view the demo, click here [![DEMO](demo.png)](https://i.imgur.com/aSkRrN5.mp4)
+- React code is contained in `new` directory
+- Project Setup
+  ```bash
+  cd new
+  npm install
+  npm run test
+  npm run build
+  cd ..
+  ```
+- Open `/assessment-ui-developer/index.html` in browser
+
+## Page communication pubsub explanation
+There are 4 topics:
+- **TopicMootools** (For mootools buttons commuication)
+- **Topic1** and **Topic2**, to show that there can be different steams of topic
+- **GlobalTopic**, to listen on all topics
+  - There is a global listener in "Global Listener Component"
+  - There is a global listener in Mootools UI
+
+Here is how they fuction
+- If you click on any mootools button (**[One]**, **[Two]**, **[Three]**), then it will be updated in Mootools UI, React Component, and Global Listener
+- If you click on React Component -> **[TopicMooTools]**, then it will update the content in self, in mootools, and Global listener.
+- If you click on **[Topic1]** or **[Topic2]**, then only `topic1` and `topic2` subscribers will be updated in Mootools UI, and Global Listener will be updated.
+- If you click on **[GlobalTopic]**, then only Global Listener Component, and `globalTopic` in mootools will be updated.
+
+
 --------
+
 ## Assignment
 
 The index.html page has code that renders a very simple MooTools-based web component with 3 buttons and a div. When the buttons are clicked, they update a div's text.

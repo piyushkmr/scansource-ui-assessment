@@ -1,6 +1,5 @@
 module.exports = {
   mode: "development",
-  watch: true,
   entry: [
     "./src/index.tsx",
     "./src/utils/pubSub.ts",
