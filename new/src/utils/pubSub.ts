@@ -56,5 +56,39 @@ class PubSub {
   }
 }
 
+export const usePubSub = (subscribeTopic: string = ALL_TOPIC) => {
+  const [data, setData] = useState<any>();
+  const [topic, setTopic] = useState<any>();
+  const uid = useRef<string | null>(null);
+
+  useEffect(() => {
+    uid.current = pubsub.subscribe((pubsubData, topic) => {
+      setData(pubsubData);
+      setTopic(topic);
+    }, subscribeTopic);
+
+    return () => {
+      if (uid.current) {
+        pubsub.unsubscribe(uid.current);
+      }
+    }
+  }, []);
+
+  const publish = (data: any, topic: string = subscribeTopic) => {
+    pubsub.publish(data, topic);
+  }
+
+  const unsubscribe = () => {
+    pubsub.unsubscribe(uid.current || '');
+  }
+
+  return {
+    data,
+    topic,
+    publish,
+    unsubscribe,
+  }
+};
+
 export const pubsub = new PubSub();
 (window as any).pubsub = pubsub;

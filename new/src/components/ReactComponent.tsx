@@ -1,16 +1,13 @@
-import { pubsub } from "../utils/pubSub";
+import { pubsub, usePubSub } from "../utils/pubSub";
 import { FunctionComponent, MouseEvent, useEffect, useState } from "react";
 
 export const ReactComponent: FunctionComponent = () => {
-  const [data, setData] = useState();
+  const { publish } = usePubSub('topic1Click');
+  const { data } = usePubSub('topic1');
 
   const handleClick1 = (e: MouseEvent<HTMLButtonElement>) => {
-    pubsub.publish(e, 'topic1Click');
+    publish(e);
   };
-
-  useEffect(() => {
-    pubsub.subscribe((topicData) => setData(topicData), 'topic1');
-  }, []);
 
   return <div className="component-frame">
     <h3>React Component</h3>
