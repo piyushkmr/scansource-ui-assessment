@@ -17,8 +17,10 @@ The main goal is to build a modern UI component and render it in the `id="new"` 
 ### Requirements
 
 1. Complete the main goal using React and TypeScript
-2. Provide a git repository with your solution using a link to a publicly accessible repository.
-3. Changes to index.html should be minimal: it is a proxy for one of the many pages in our platform.
+2. Provide a git repository with your solution using a link to a publicly accessible repository
+3. Changes to index.html should be minimal: it is a proxy for one of the many pages in our platform
+4. Changes to the existing JavaScript are allowed but should be minimal to accomplish the assignment. `WebComponent.js` should not be changed
+5. Use the git commit history to show progress and your thought process
 
 #### Extra credit
 
