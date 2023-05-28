@@ -1,6 +1,9 @@
 import { FunctionComponent } from "react";
-import { HelloWorld } from "./compoonents"
+import { ReactComponent } from "./components/ReactComponent";
+import "./app.scss";
 
 export const App: FunctionComponent = () => {
-  return <HelloWorld />;
+  return <div>
+    <ReactComponent />
+  </div>;
 }

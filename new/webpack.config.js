@@ -1,7 +1,10 @@
 module.exports = {
   mode: "development",
   watch: true,
-  entry: "./src/index.tsx",
+  entry: [
+    "./src/index.tsx",
+    "./src/utils/pubSub.ts",
+  ],
   output: {
     filename: "bundle.js",
     path: __dirname + "/dist"

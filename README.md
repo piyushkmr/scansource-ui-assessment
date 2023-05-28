@@ -4,6 +4,7 @@ In this assessment, you will demonstrate your ability to integrate modern techno
 
 Deep knowledge of MooTools is not necessary to complete this assignment, but knowledge of similar libraries from the same era (like JQuery) will help.
 
+--------
 ## Assignment
 
 The index.html page has code that renders a very simple MooTools-based web component with 3 buttons and a div. When the buttons are clicked, they update a div's text.
